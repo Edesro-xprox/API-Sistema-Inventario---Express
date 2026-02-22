@@ -1,18 +1,28 @@
-# Inventory API
+## Proyecto
 
-API REST backend para un sistema de gestión de inventario. Proporciona autenticación de usuarios, gestión de productos y manejo de datos general del inventario.
+INVENTORY_API
 
-## Tecnologías Utilizadas
+## Descripción
 
-- **Node.js** - Entorno de ejecución
-- **Express.js** - Framework web para crear la API
-- **MongoDB** - Base de datos NoSQL (con Mongoose como ODM)
-- **JWT** - Autenticación mediante tokens seguros
-- **Bcrypt** - Encriptación de contraseñas
-- **CORS** - Gestión de solicitudes entre dominios
-- **Dotenv** - Gestión de variables de entorno
+API REST backend para un sistema de gestión de inventario. Proporciona autenticación de usuarios, gestión de productos y manejo de datos maestros.
 
-## 📁 Estructura del Proyecto
+## Requisitos
+
+- Sistema operativo: Windows, macOS o Linux
+- Node.js >= 18
+- npm >= 9
+- Navegador web moderno (Chrome, Firefox, Edge)
+
+## Tecnologías / versión
+
+- Express.js: 5.2.1
+- mongoose: 9.0.2 
+- JWT: 9.0.3
+- Bcrypt: 6.0.0
+- CORS: 2.8.5
+- Dotenv: 17.2.3
+
+## Estructura del Proyecto
 
 ´´´
 src/
@@ -41,49 +51,26 @@ src/
     └── product.service.js
 ´´´
 
-## Instalación
+## Ejecución
 
 ```bash
 # 1. Clonar repositorio
 git clone <tu-repo>
-cd inventory_api
+cd nombre_del_proyecto
 
 # 2. Instalar dependencias
 npm install
 
 # 3. Crear archivo .env (usar .env.example como referencia)
-cp .env.example .env
 
 # 4. Configurar variables de entorno
 # Editar .env con tus credenciales de MongoDB y puerto
-```
 
-## Variables de Entorno
-
-Crear archivo `.env` en la raíz del proyecto:
-
-```env
-PORT=3000
-MONGO_URI=mongodb://localhost:27017/inventory
-JWT_SECRET=tu_secreto_aqui
-JWT_EXPIRES_IN=5m
-```
-
-## Ejecución
-
-```bash
-# Modo desarrollo (con recarga automática)
+# 5. Modo desarrollo (con recarga automática)
 npm run dev
-
-# Modo producción
-node src/server.js
+La API estará disponible en: `http://localhost:3000`
 ```
 
-La API estará disponible en: `http://localhost:3000`
+## Autor
 
-## Seguridad
-
-- **Autenticación:** JWT (JSON Web Tokens)
-- **Contraseñas:** Encriptadas con Bcrypt
-- **CORS:** Configurado para controlar acceso desde clientes
-- **Variables sensibles:** Almacenadas en `.env` (nunca en el repositorio)
+Edson Espinoza
